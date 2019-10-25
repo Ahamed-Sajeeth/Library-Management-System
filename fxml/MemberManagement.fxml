@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.view.controller.MemberManagementController">
+   <children>
+      <AnchorPane fx:id="sidebar" prefHeight="600.0" prefWidth="247.0" styleClass="vbox">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="15.0" layoutY="61.0" onAction="#btnDashboard" prefHeight="68.0" prefWidth="215.0" text="Dashboard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBookMgmt" layoutX="15.0" layoutY="143.0" onAction="#btnBookMgmt" prefHeight="68.0" prefWidth="215.0" text="Book Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnMemberMgmt" layoutX="16.0" layoutY="226.0" onAction="#btnMemberMgmt" prefHeight="68.0" prefWidth="215.0" style="-fx-background-color: c62828;" text="Members Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUserMgmt" layoutX="17.0" layoutY="310.0" onAction="#btnUserMgmt" prefHeight="68.0" prefWidth="215.0" text="Users Managment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLendBook" layoutX="17.0" layoutY="394.0" onAction="#btnLendBook" prefHeight="68.0" prefWidth="215.0" text="Lend a Book">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSignOut" layoutX="17.0" layoutY="477.0" onAction="#btnSignOut" prefHeight="68.0" prefWidth="215.0" text="Sign Out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Text layoutX="435.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Members Management">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Pane layoutX="263.0" layoutY="61.0" prefHeight="183.0" prefWidth="717.0" style="-fx-background-color: #1976D2;">
+         <children>
+            <JFXTextField fx:id="memberIdField" focusColor="WHITE" labelFloat="true" layoutX="15.0" layoutY="17.0" prefHeight="37.0" prefWidth="193.0" promptText="Member ID" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameField" focusColor="WHITE" labelFloat="true" layoutX="265.0" layoutY="17.0" prefHeight="37.0" prefWidth="193.0" promptText="Name" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="doaField" focusColor="WHITE" labelFloat="true" layoutX="506.0" layoutY="18.0" prefHeight="37.0" prefWidth="193.0" promptText="Date of Admission" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="13.0" layoutY="94.0" prefHeight="23.0" prefWidth="138.0" text="Gender : " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="genderField" layoutX="69.0" layoutY="98.0" selected="true" text="Male" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Gender" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="genderField" layoutX="134.0" layoutY="98.0" text="Female" textFill="WHITE" toggleGroup="$Gender">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXTextField fx:id="emailField" focusColor="WHITE" labelFloat="true" layoutX="264.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="Email" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="phoneField" focusColor="WHITE" labelFloat="true" layoutX="506.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="Phone No" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="gradeField" focusColor="WHITE" labelFloat="true" layoutX="264.0" layoutY="134.0" prefHeight="37.0" prefWidth="193.0" promptText="Grade" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="addressField" focusColor="WHITE" labelFloat="true" layoutX="505.0" layoutY="134.0" prefHeight="37.0" prefWidth="193.0" promptText="Address" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="addMember" buttonType="RAISED" layoutX="115.0" layoutY="195.0" onAction="#addMember" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="searchMember" buttonType="RAISED" layoutX="240.0" layoutY="195.0" onAction="#searchMember" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="updateMember" buttonType="RAISED" layoutX="363.0" layoutY="195.0" onAction="#updateMember" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="deleteMember" buttonType="RAISED" layoutX="486.0" layoutY="195.0" onAction="#deleteMember" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <ComboBox fx:id="loadMemberType" layoutX="14.0" layoutY="148.0" onAction="#loadMemberType" prefHeight="25.0" prefWidth="197.0" promptText="Select Member Type" />
+         </children>
+      </Pane>
+      <TableView fx:id="membersTable" layoutX="264.0" layoutY="311.0" prefHeight="269.0" prefWidth="717.0">
+         <columns>
+            <TableColumn fx:id="MemberIdColumn" prefWidth="36.0" text="ID" />
+            <TableColumn fx:id="NameColumn" prefWidth="86.0" text="Name" />
+            <TableColumn fx:id="DOAColumn" prefWidth="78.33334350585938" text="DOA" />
+            <TableColumn fx:id="GenderColumn" prefWidth="62.666656494140625" text="Gender" />
+            <TableColumn fx:id="EmailColumn" prefWidth="103.6666259765625" text="Email" />
+            <TableColumn fx:id="PhoneColumn" prefWidth="91.3333740234375" text="Phone" />
+            <TableColumn fx:id="TypeColumn" prefWidth="66.66668701171875" text="Member Type" />
+            <TableColumn fx:id="GradeColumn" prefWidth="93.0" text="Grade" />
+            <TableColumn fx:id="AddressColumn" prefWidth="102.0" text="Address" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

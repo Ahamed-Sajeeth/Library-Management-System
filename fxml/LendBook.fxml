@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.view.controller.LendBookController">
+   <children>
+      <AnchorPane fx:id="sidebar" prefHeight="600.0" prefWidth="247.0" styleClass="vbox">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="15.0" layoutY="61.0" onAction="#btnDashboard" prefHeight="68.0" prefWidth="215.0" text="Dashboard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBookMgmt" layoutX="15.0" layoutY="143.0" onAction="#btnBookMgmt" prefHeight="68.0" prefWidth="215.0" text="Book Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnMemberMgmt" layoutX="16.0" layoutY="226.0" onAction="#btnMemberMgmt" prefHeight="68.0" prefWidth="215.0" text="Members Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUserMgmt" layoutX="17.0" layoutY="310.0" onAction="#btnUserMgmt" prefHeight="68.0" prefWidth="215.0" text="Users Managment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLendBook" layoutX="17.0" layoutY="394.0" onAction="#btnLendBook" prefHeight="68.0" prefWidth="215.0" style="-fx-background-color: c62828;" text="Lend a Book">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSignOut" layoutX="17.0" layoutY="477.0" onAction="#btnSignOut" prefHeight="68.0" prefWidth="215.0" text="Sign Out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Text layoutX="507.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Lending" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="lendBook" buttonType="RAISED" layoutX="489.0" layoutY="489.0" onAction="#lendBook" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Lend Book" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Reset" buttonType="RAISED" layoutX="647.0" layoutY="489.0" onAction="#Reset" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="278.0" layoutY="172.0" prefHeight="23.0" prefWidth="138.0" text="Choose Book :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="loadBooks" layoutX="416.0" layoutY="174.0" onAction="#loadBooks" prefWidth="150.0" promptText="Select Book" />
+      <Label layoutX="278.0" layoutY="114.0" prefHeight="23.0" prefWidth="138.0" text="Member ID : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="memberIdField" layoutX="416.0" layoutY="107.0" prefHeight="25.0" prefWidth="242.0" promptText="Enter Member ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="278.0" layoutY="233.0" prefHeight="23.0" prefWidth="138.0" text="Borrow Date :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="borrowDateField" layoutX="416.0" layoutY="226.0" prefHeight="25.0" prefWidth="242.0" promptText="YYYY-MM-DD">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="278.0" layoutY="296.0" prefHeight="23.0" prefWidth="138.0" text="Return Date :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="returnDateField" layoutX="416.0" layoutY="289.0" prefHeight="25.0" prefWidth="242.0" promptText="YYYY-MM-DD">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="279.0" layoutY="363.0" prefHeight="23.0" prefWidth="138.0" text="Lend By :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lenderNameField" layoutX="417.0" layoutY="356.0" prefHeight="25.0" prefWidth="242.0" promptText="Lender/Librarian Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="bookReturn" buttonType="RAISED" layoutX="805.0" layoutY="103.0" onAction="#bookReturn" prefHeight="38.0" prefWidth="171.0" style="-fx-background-color: #1976D2;" text="Book Return" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

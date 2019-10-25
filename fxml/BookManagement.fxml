@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.view.controller.BookManagemetController">
+   <children>
+      <AnchorPane fx:id="sidebar" prefHeight="600.0" prefWidth="247.0" styleClass="vbox">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="15.0" layoutY="61.0" onAction="#btnDashboard" prefHeight="68.0" prefWidth="215.0" text="Dashboard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBookMgmt" layoutX="15.0" layoutY="143.0" onAction="#btnBookMgmt" prefHeight="68.0" prefWidth="215.0" style="-fx-background-color: c62828;" text="Book Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnMemberMgmt" layoutX="16.0" layoutY="226.0" onAction="#btnMemberMgmt" prefHeight="68.0" prefWidth="215.0" text="Members Management">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUserMgmt" layoutX="17.0" layoutY="310.0" onAction="#btnUserMgmt" prefHeight="68.0" prefWidth="215.0" text="Users Managment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLendBook" layoutX="17.0" layoutY="394.0" onAction="#btnLendBook" prefHeight="68.0" prefWidth="215.0" text="Lend a Book">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSignOut" layoutX="17.0" layoutY="477.0" onAction="#btnSignOut" prefHeight="68.0" prefWidth="215.0" text="Sign Out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Text layoutX="460.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Management">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Pane layoutX="263.0" layoutY="61.0" prefHeight="133.0" prefWidth="717.0" style="-fx-background-color: #1976D2;">
+         <children>
+            <JFXTextField fx:id="bookIdField" focusColor="WHITE" labelFloat="true" layoutX="15.0" layoutY="17.0" prefHeight="37.0" prefWidth="120.0" promptText="Book ID" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="bookNameField" focusColor="WHITE" labelFloat="true" layoutX="157.0" layoutY="17.0" prefHeight="37.0" prefWidth="193.0" promptText="Book Name" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="isbnField" focusColor="WHITE" labelFloat="true" layoutX="376.0" layoutY="17.0" prefHeight="37.0" prefWidth="140.0" promptText="ISBN" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="authorField" focusColor="WHITE" labelFloat="true" layoutX="536.0" layoutY="18.0" prefHeight="37.0" prefWidth="165.0" promptText="Author" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="categoryField" focusColor="WHITE" labelFloat="true" layoutX="16.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="Category" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="descriptionField" focusColor="WHITE" labelFloat="true" layoutX="264.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="Description" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="copiesField" focusColor="WHITE" labelFloat="true" layoutX="506.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="No Of Copies" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="availableField" focusColor="WHITE" labelFloat="true" layoutX="506.0" layoutY="77.0" prefHeight="37.0" prefWidth="193.0" promptText="No Of Copies" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="addBook" buttonType="RAISED" layoutX="115.0" layoutY="145.0" onAction="#addBook" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="searchBook" buttonType="RAISED" layoutX="240.0" layoutY="145.0" onAction="#searchBook" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="updateBook" buttonType="RAISED" layoutX="363.0" layoutY="145.0" onAction="#updateBook" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #1976D2;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="deleteBook" buttonType="RAISED" layoutX="486.0" layoutY="145.0" onAction="#deleteBook" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="booksTable" layoutX="264.0" layoutY="276.0" prefHeight="304.0" prefWidth="717.0">
+         <columns>
+            <TableColumn fx:id="BookIdColumn" prefWidth="71.99996948242188" text="Book ID" />
+            <TableColumn fx:id="BookNameColumn" prefWidth="92.66665649414062" text="Book Name" />
+            <TableColumn fx:id="IsbnColumn" prefWidth="80.66665649414062" text="ISBN" />
+            <TableColumn fx:id="AuthorColumn" prefWidth="88.6666259765625" text="Author" />
+            <TableColumn fx:id="CategoryColumn" minWidth="5.66668701171875" prefWidth="133.33331298828125" text="Category" />
+            <TableColumn fx:id="DescriptionColumn" prefWidth="143.66668701171875" text="Description" />
+            <TableColumn fx:id="CopiesColumn" prefWidth="104.3333740234375" text="No Of Copies" />
+            <TableColumn fx:id="AvailableColumn" prefWidth="104.3333740234375" text="Available Of Copies" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
